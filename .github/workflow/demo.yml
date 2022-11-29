@@ -1,6 +1,6 @@
 name: Event-demo
 on:
-  pull_request:
+  pull_requests:
     types: 
       - opened
   workflow_dispatch:
