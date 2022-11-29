@@ -1,8 +1,7 @@
 name: Event-demo
 on:
-  pull_requests:
-    types: 
-      - opened
+  pull_request:
+    types: [opened]
   workflow_dispatch:
 jobs:
   event-check:
