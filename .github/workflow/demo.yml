@@ -1,5 +1,9 @@
 name: Event-demo
 on:
+  pull_request:
+    types: 
+      - opened
+  workflow_dispatch:
 jobs:
   event-check:
   runs-on: sirpi
