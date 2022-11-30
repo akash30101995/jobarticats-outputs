@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Event-demo
 on:
   pull_request:
@@ -20,3 +21,26 @@ jobs:
       run: npm run build
     - name: deploy the code
       run: echo "deploying the code"
+=======
+name: Event-demo
+on:
+  pull_request:
+    types: [opened]
+  workflow_dispatch:
+jobs:
+  event-check:
+  runs-on: sirpi
+  steps:
+    - name: Output of all the events
+      run: "${{ toJSON(github) }}"
+    - name: Checkout to repository
+      run: actions/checkout@v3
+    - name: Install dependencies
+      run: npm ci
+    - name: test
+      run: npm run test
+    - name: build the code
+      run: npm run build
+    - name: deploy the code
+      run: echo "deploying the code"
+>>>>>>> 4f3399cc800422de800dd9ce917d7acb2efc7c0c
